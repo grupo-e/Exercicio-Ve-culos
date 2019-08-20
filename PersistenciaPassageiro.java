@@ -16,7 +16,7 @@ public class PersistenciaPassageiro {
     private static final String SAMPLE_CSV_FILE_PATH = "passsageiros.dat";
     String path;
 
-    public PersistenciaVeiculos (String path){
+    public PersistenciaPassageiro (String path){
 
         pers = new LinkedList<Veiculo>();
         this.path = path;

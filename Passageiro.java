@@ -3,12 +3,13 @@ public class Passageiro{
     private String nome;
     private String nroCartao;
     private double pontuacaoMedia;
+    public FormaPagamento forPag;
 
     public enum FormaPagamento{
         DINHEIRO,CARTAO,TODAS;
     }
 
-    public Passageiro (Sting nome, String cpf, String nroCartao) {
+    public Passageiro (String nome, String cpf, String nroCartao) {
 
         this.nome = nome;
         this.cpf = cpf;
@@ -21,7 +22,7 @@ public class Passageiro{
     }
 
     public FormaPagamento getFormaPagamento(){
-        return FormaPagamento;
+        return forPag;
     }
 
     public String getNroCartao(){

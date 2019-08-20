@@ -2,6 +2,7 @@ public class Motorista{
     public String cpf;
     public String nome;
     public Veiculo veiculo;
+    public FormaPagamento forPag;
     public enum FormaPagamento{
         DINHEIRO,CARTAO,TODAS;
     }
@@ -28,7 +29,7 @@ public class Motorista{
     }
 
     public FormaPagamento getFormaPagamento(){
-        return FormaPagamento;
+        return forPag;
     }
 
     public int getPontuacaoMedia(){
