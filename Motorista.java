@@ -6,6 +6,14 @@ public class Motorista{
         DINHEIRO,CARTAO,TODAS;
     }
     public int pontuacaoMedia;
+
+    public Motorista (String nome, String cpf, Veiculo veiculo) {
+
+        this.nome = nome;
+        this.cpf = cpf;
+        this.veiculo = veiculo;
+
+    }
     
     public String getCPF(){
         return cpf;
@@ -23,7 +31,7 @@ public class Motorista{
         return FormaPagamento;
     }
 
-      public int getPontuacaoMedia(){
+    public int getPontuacaoMedia(){
         return pontuacaoMedia;
     }
 
