@@ -3,6 +3,7 @@ public class Passageiro{
     private String nome;
     private String nroCartao;
     private double pontuacaoMedia;
+    private List<Double> pontuacaols; 
     public FormaPagamento forPag;
 
     public enum FormaPagamento{
@@ -14,6 +15,7 @@ public class Passageiro{
         this.nome = nome;
         this.cpf = cpf;
         this.nroCartao = nroCartao;
+        pontuacao = new LinkedList<>();
 
     }
 
@@ -30,11 +32,22 @@ public class Passageiro{
     }
 
     public double getPontuacaoMedia(){
+
+        double total = 0.0;
+
+        for (double v : pontuacaols) {
+
+            total+=v;
+
+        }
+        pontuacaoMedia = total/pontuacaols.size();
         return pontuacaoMedia;
     }
 
     public void infoPontuacao(int pontuacao){
-        pontuacaoMedia = pontuacao;
+
+        pontuacaols.add(pontuacao);
+
     }
 
 }

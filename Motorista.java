@@ -1,8 +1,9 @@
 public class Motorista{
-    public String cpf;
-    public String nome;
-    public Veiculo veiculo;
-    public FormaPagamento forPag;
+    private String cpf;
+    private String nome;
+    private Veiculo veiculo;
+    private FormaPagamento forPag;
+    private List<Double> pontuacaols;
     public enum FormaPagamento{
         DINHEIRO,CARTAO,TODAS;
     }
@@ -13,6 +14,7 @@ public class Motorista{
         this.nome = nome;
         this.cpf = cpf;
         this.veiculo = veiculo;
+        pontuacaols = new LinkedList<>();
 
     }
     
@@ -32,11 +34,22 @@ public class Motorista{
         return forPag;
     }
 
-    public int getPontuacaoMedia(){
+   public double getPontuacaoMedia(){
+
+        double total = 0.0;
+
+        for (double v : pontuacaols) {
+
+            total+=v;
+
+        }
+        pontuacaoMedia = total/pontuacaols.size();
         return pontuacaoMedia;
     }
 
     public void infoPontuacao(int pontuacao){
-        pontuacaoMedia = pontuacao;
+
+        pontuacaols.add(pontuacao);
+
     }
 }
